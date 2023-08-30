@@ -51,7 +51,7 @@ dependencies {
 
 apply plugin: 'com.google.gms.google-services'
 
-sonar {
+sonarqube {
   properties {
     property("sonar.projectKey", "devanshdaffodils_assessment-q-3-analysis")
     property("sonar.organization", "devanshdaffodils")
