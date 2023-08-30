@@ -38,3 +38,9 @@ jobs:
       env:
         AWS_S3_BUCKET: assement-q-3-android-apk  # replace with your S3 bucket name
         SOURCE_DIR: app/build/outputs/apk/release/  # replace with the directory to your APK file
+        
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
