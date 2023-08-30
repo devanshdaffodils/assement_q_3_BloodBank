@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+plugins {
+  id("org.sonarqube") version "4.2.1.3168"
+}
+
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -45,10 +50,6 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
-
-plugins {
-  id("org.sonarqube") version "4.2.1.3168"
-}
 
 sonar {
   properties {
