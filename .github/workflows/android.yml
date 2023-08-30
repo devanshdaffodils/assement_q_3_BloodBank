@@ -26,7 +26,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: ./gradlew build sonar --info
+      run: ./gradlew build 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -45,5 +45,5 @@ jobs:
     # - name: SonarCloud Scan
     #   uses: sonarsource/sonarcloud-github-action@master
     #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  sonar --info
     #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
