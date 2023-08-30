@@ -45,3 +45,16 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
+
+plugins {
+  id("org.sonarqube") version "4.2.1.3168"
+}
+
+sonar {
+  properties {
+    property("sonar.projectKey", "devanshdaffodils_assessment-q-3-analysis")
+    property("sonar.organization", "devanshdaffodils")
+    property("sonar.host.url", "https://sonarcloud.io")
+  }
+}
+
